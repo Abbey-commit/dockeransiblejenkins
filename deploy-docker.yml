@@ -1,13 +1,13 @@
 ---
-- hosts: dev
+- hosts: app
   become: True
   tasks:
     - name: Install python pip
-      app:
+      apt:
         name: python3-pip
         state: present
     - name: Install docker
-      app:
+      apt:
         name: docker
         state: present
     - name: start docker
